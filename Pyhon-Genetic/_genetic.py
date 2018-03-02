@@ -2,7 +2,12 @@ import os
 import random
 from _chromosome import *
 def Selection(population):
-    p1 = [100]
+    parent1 = population[0]
+
+    randomparent = random.randint(1, len(population) - 1)
+    parent2 = population[randomparent]
+    p = [parent1,parent2]
+    return p
 def Mutation(mutationRate, gene):
     if mutationRate > 100:
         mutationRate = 100
